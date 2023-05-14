@@ -33,6 +33,7 @@ public class JDKReaderTest {
         line.drain();
         line.stop();
         line.close();
+        stream.close();
     }
 
 }
