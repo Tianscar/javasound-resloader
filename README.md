@@ -19,6 +19,7 @@ dependencies {
 ```
 
 ## Usage
+[JavaDoc](https://docs.tianscar.com/javasound-res-spi)  
 [Tests and Examples](/src/test/java/com/tianscar/javasound/resspi/test)
 
 Note you need to download test audios [here](https://github.com/Tianscar/fbodemo1) and put them to /src/test/resources to run the test code properly!
