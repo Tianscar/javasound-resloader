@@ -1,4 +1,4 @@
-package com.tianscar.javasound.resspi.test;
+package com.tianscar.javasound.resloader.test;
 
 import com.tianscar.javasound.sampled.AudioResourceLoader;
 import org.junit.jupiter.api.DisplayName;

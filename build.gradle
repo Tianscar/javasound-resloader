@@ -9,8 +9,8 @@ ext {
     libraryGroupName = 'com.tianscar.javasound'
     libraryVendorName = 'Tianscar'
 
-    libraryVersionCode = 1
-    libraryVersionName = '0.1.0'
+    libraryVersionCode = 2
+    libraryVersionName = '0.1.1'
 
     librarySourceCompatibility = JavaVersion.VERSION_1_8
     libraryTargetCompatibility = JavaVersion.VERSION_1_8
@@ -51,7 +51,7 @@ publishing {
             pom {
                 name = libraryName
                 description = 'Extended ServiceProvider Interface for JavaSound to load audio from resources'
-                url = 'https://github.com/Tianscar/javasound-res-spi'
+                url = 'https://github.com/Tianscar/javasound-resloader'
                 licenses {
                     license {
                         name = 'The MIT License'
@@ -66,9 +66,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:git@github.com/Tianscar/javasound-res-spi.git'
-                    developerConnection = 'scm:git:git@github.com/Tianscar/javasound-res-spi.git'
-                    url = 'https://github.com/Tianscar/javasound-res-spi'
+                    connection = 'scm:git:git@github.com/Tianscar/javasound-resloader.git'
+                    developerConnection = 'scm:git:git@github.com/Tianscar/javasound-resloader.git'
+                    url = 'https://github.com/Tianscar/javasound-resloader'
                 }
             }
         }
