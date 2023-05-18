@@ -17,9 +17,10 @@ public class JDKSoundbankResourceReader implements SoundbankResourceReader {
 
     @Override
     public Soundbank getSoundbank(ClassLoader resourceLoader, String name) throws InvalidMidiDataException, IOException {
-        InputStream stream = resourceLoader.getResourceAsStream(name);
-        if (stream == null) throw new IOException("could not load resource \"" + name + "\" with ClassLoader \"" + resourceLoader + "\"");
-        else return MidiSystem.getSoundbank(stream);
+        try (InputStream stream = resourceLoader.getResourceAsStream(name)) {
+            if (stream == null) throw new IOException("could not load resource \"" + name + "\" with ClassLoader \"" + resourceLoader + "\"");
+            else return MidiSystem.getSoundbank(stream);
+        }
     }
 
 }
