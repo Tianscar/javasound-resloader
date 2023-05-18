@@ -18,9 +18,10 @@ public class JDKAudioResourceReader implements AudioResourceReader {
 
     @Override
     public AudioFileFormat getAudioFileFormat(ClassLoader resourceLoader, String name) throws UnsupportedAudioFileException, IOException {
-        InputStream stream = resourceLoader.getResourceAsStream(name);
-        if (stream == null) throw new IOException("could not load resource \"" + name + "\" with ClassLoader \"" + resourceLoader + "\"");
-        else return AudioSystem.getAudioFileFormat(stream);
+        try (InputStream stream = resourceLoader.getResourceAsStream(name)) {
+            if (stream == null) throw new IOException("could not load resource \"" + name + "\" with ClassLoader \"" + resourceLoader + "\"");
+            else return AudioSystem.getAudioFileFormat(stream);
+        }
     }
 
     @Override

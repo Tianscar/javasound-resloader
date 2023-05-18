@@ -18,9 +18,10 @@ public class JDKMidiResourceReader implements MidiResourceReader {
 
     @Override
     public MidiFileFormat getMidiFileFormat(ClassLoader resourceLoader, String name) throws InvalidMidiDataException, IOException {
-        InputStream stream = resourceLoader.getResourceAsStream(name);
-        if (stream == null) throw new IOException("could not load resource \"" + name + "\" with ClassLoader \"" + resourceLoader + "\"");
-        else return MidiSystem.getMidiFileFormat(stream);
+        try (InputStream stream = resourceLoader.getResourceAsStream(name)) {
+            if (stream == null) throw new IOException("could not load resource \"" + name + "\" with ClassLoader \"" + resourceLoader + "\"");
+            else return MidiSystem.getMidiFileFormat(stream);
+        }
     }
 
     @Override

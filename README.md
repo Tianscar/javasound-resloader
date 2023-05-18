@@ -14,7 +14,7 @@ repositories {
 ```groovy
 dependencies {
     ...
-    implementation 'com.tianscar.javasound:javasound-resloader:0.1.1'
+    implementation 'com.tianscar.javasound:javasound-resloader:0.1.2'
 }
 ```
 
