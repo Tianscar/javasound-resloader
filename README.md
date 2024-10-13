@@ -1,3 +1,5 @@
+WARNING: THIS PROJECT IS NO LONGER MAINTAINED. MOVED TO: https://github.com/jseproject/jse-api/
+
 # JavaSound ResourceLoader SPI
 This library provides an extended ServiceProvider interface for JavaSound to load audio from resources.
 
